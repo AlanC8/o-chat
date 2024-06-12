@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 class="title">I Chat</h1>
+    <h3 id="user-status" class="user-status">Offline</h3>
+    <div class="main">
+      <div class="name">
+        <span><i class="far fa-user"></i></span>
+        <input
+          type="text"
+          class="name-input"
+          id="name-input"
+          value="anonymous"
+          maxlength="20"
+        />
+      </div>
+      <ul id="message-container" class="message-container">
+        <li class="message-left">
+          <p class="message">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia,
+            pariatur.
+            <span>bluebird. 11 March</span>
+          </p>
+        </li>
+        <li class="message-right">
+          <p class="message">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia,
+            pariatur.
+            <span>bluebird. 11 March</span>
+          </p>
+        </li>
+      </ul>
+      <form class="message-from" id="message-form">
+        <input
+          type="text"
+          class="message-input"
+          id="message-input"
+          placeholder="Type a message"
+        />
+        <div class="v-divider"></div>
+        <button type="submit" class="send-button">
+          Send <i class="fas fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+    <h3 class="clients-total" id="clients-total">Total Clients: 3</h3>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
